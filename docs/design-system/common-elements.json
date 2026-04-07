@@ -1,0 +1,438 @@
+{
+	"common_elements": {
+		"headings": {
+			"description": "Заголовки всех уровней",
+			"variants": [
+				{
+					"tag": "h1",
+					"size": "56px",
+					"weight": 700,
+					"lineHeight": "1.1",
+					"letterSpacing": "-0.02em",
+					"font": "accent"
+				},
+				{
+					"tag": "h2",
+					"size": "40px",
+					"weight": 700,
+					"lineHeight": "1.2",
+					"letterSpacing": "-0.01em",
+					"font": "accent"
+				},
+				{
+					"tag": "h3",
+					"size": "32px",
+					"weight": 600,
+					"lineHeight": "1.3",
+					"letterSpacing": "-0.01em",
+					"font": "primary"
+				},
+				{
+					"tag": "h4",
+					"size": "24px",
+					"weight": 600,
+					"lineHeight": "1.4",
+					"letterSpacing": "0em",
+					"font": "primary"
+				},
+				{
+					"tag": "h5",
+					"size": "20px",
+					"weight": 600,
+					"lineHeight": "1.4",
+					"letterSpacing": "0em",
+					"font": "primary"
+				},
+				{
+					"tag": "h6",
+					"size": "18px",
+					"weight": 500,
+					"lineHeight": "1.5",
+					"letterSpacing": "0em",
+					"font": "primary"
+				}
+			]
+		},
+
+		"text": {
+			"description": "Текстовые блоки",
+			"variants": [
+				{
+					"name": "small",
+					"size": "12px",
+					"lineHeight": "1.4",
+					"usage": "подписи, метки, юридический текст"
+				},
+				{
+					"name": "caption",
+					"size": "14px",
+					"lineHeight": "1.5",
+					"usage": "вспомогательный текст, описания"
+				},
+				{
+					"name": "body",
+					"size": "16px",
+					"lineHeight": "1.6",
+					"usage": "основной текст"
+				},
+				{
+					"name": "lead",
+					"size": "18px",
+					"lineHeight": "1.6",
+					"usage": "вводные абзацы, лиды"
+				},
+				{
+					"name": "large",
+					"size": "20px",
+					"lineHeight": "1.5",
+					"usage": "увеличенный текст, intro-блоки"
+				}
+			]
+		},
+
+		"buttons": {
+			"description": "Кнопки трёх типов в трёх размерах",
+			"types": {
+				"primary": {
+					"description": "Основное CTA действие",
+					"background": "accent.primary",
+					"text": "text.inverse",
+					"border": "none",
+					"hover": "accent.hover"
+				},
+				"secondary": {
+					"description": "Второстепенное действие",
+					"background": "transparent",
+					"text": "accent.primary",
+					"border": "1px solid accent.primary",
+					"hover": "accent.light"
+				},
+				"ghost": {
+					"description": "Ненавязчивое действие",
+					"background": "transparent",
+					"text": "text.secondary",
+					"border": "1px solid border.default",
+					"hover": "background.secondary"
+				},
+				"danger": {
+					"description": "Деструктивное действие",
+					"background": "semantic.error",
+					"text": "text.inverse",
+					"border": "none"
+				},
+				"link": {
+					"description": "Текстовая кнопка-ссылка",
+					"background": "transparent",
+					"text": "accent.primary",
+					"border": "none",
+					"textDecoration": "underline"
+				}
+			},
+			"sizes": {
+				"small": {
+					"height": "32px",
+					"padding": "0 12px",
+					"fontSize": "13px",
+					"borderRadius": "button",
+					"iconSize": "14px"
+				},
+				"medium": {
+					"height": "40px",
+					"padding": "0 20px",
+					"fontSize": "15px",
+					"borderRadius": "button",
+					"iconSize": "16px"
+				},
+				"large": {
+					"height": "48px",
+					"padding": "0 28px",
+					"fontSize": "16px",
+					"borderRadius": "button",
+					"iconSize": "18px"
+				}
+			},
+			"states": ["default", "hover", "active", "disabled", "loading"],
+			"modifiers": ["icon-left", "icon-right", "icon-only", "full-width"]
+		},
+
+		"form_elements": {
+			"inputs": {
+				"text": {
+					"description": "Обычный текстовый input",
+					"height": "40px",
+					"borderRadius": "input"
+				},
+				"email": {
+					"description": "Input для email с валидацией",
+					"height": "40px",
+					"borderRadius": "input"
+				},
+				"password": {
+					"description": "Input с переключением видимости",
+					"height": "40px",
+					"borderRadius": "input"
+				},
+				"number": {
+					"description": "Числовой input с шагом",
+					"height": "40px",
+					"borderRadius": "input"
+				},
+				"textarea": {
+					"description": "Многострочный input",
+					"minHeight": "100px",
+					"borderRadius": "input"
+				}
+			},
+			"select": {
+				"basic": { "description": "Стандартный выпадающий список" },
+				"search_suggestion": {
+					"description": "Select с поиском и автодополнением"
+				},
+				"multi_select": {
+					"description": "Выбор нескольких значений с тегами"
+				}
+			},
+			"controls": {
+				"checkbox": {
+					"description": "Флажок с тремя состояниями: off / on / indeterminate",
+					"size": "18px"
+				},
+				"radio": { "description": "Радио-кнопка", "size": "18px" },
+				"toggle": {
+					"description": "Переключатель on/off",
+					"width": "44px",
+					"height": "24px"
+				}
+			},
+			"sliders": {
+				"single_range": {
+					"description": "Один ползунок — выбор одного значения"
+				},
+				"double_range": {
+					"description": "Два ползунка — выбор диапазона (цена от / до)"
+				}
+			},
+			"special": {
+				"tags_input": {
+					"description": "Input с добавлением и удалением тегов"
+				},
+				"counter_input": {
+					"description": "Числовой ввод с управлением значением через инкремент и декремент. Элемент интерфейса типа счётчик (stepper / numeric input).",
+					"structure": {
+						"value_display": "Текущее числовое значение, отображаемое в центре компонента",
+						"decrement_button": "Кнопка уменьшения значения (расположена слева)",
+						"increment_button": "Кнопка увеличения значения (расположена справа)"
+					},
+					"behavior": {
+						"increment": "Увеличивает значение на заданный шаг при нажатии на кнопку '+'",
+						"decrement": "Уменьшает значение на заданный шаг при нажатии на кнопку '-'",
+						"manual_input": "Опционально: пользователь может вводить значение вручную",
+						"limits": "Значение может быть ограничено минимальным и/или максимальным пределом"
+					},
+					"properties": {
+						"value": "Текущее значение",
+						"step": "Шаг изменения (по умолчанию 1)",
+						"min": "Минимально допустимое значение (опционально)",
+						"max": "Максимально допустимое значение (опционально)",
+						"disabled": "Состояние неактивности компонента (опционально)"
+					}
+				},
+				"file_dropzone": {
+					"description": "Drag-and-drop зона загрузки файлов с fallback-кнопкой"
+				},
+				"color_picker_dots": {
+					"description": "Выбор цвета кружочками"
+				},
+				"size_badges": {
+					"description": "Выбор размера через клик по бейджу"
+				}
+			},
+			"states": [
+				"default",
+				"focused",
+				"filled",
+				"disabled",
+				"error",
+				"success"
+			],
+			"label": { "size": "14px", "weight": 500, "marginBottom": "6px" },
+			"helper_text": {
+				"size": "12px",
+				"color": "text.muted",
+				"marginTop": "4px"
+			},
+			"error_text": {
+				"size": "12px",
+				"color": "semantic.error",
+				"marginTop": "4px"
+			}
+		},
+
+		"badges_chips": {
+			"badge": {
+				"description": "Статусный индикатор / счётчик",
+				"sizes": {
+					"sm": {
+						"height": "18px",
+						"fontSize": "11px",
+						"padding": "0 6px"
+					},
+					"md": {
+						"height": "22px",
+						"fontSize": "12px",
+						"padding": "0 8px"
+					},
+					"lg": {
+						"height": "26px",
+						"fontSize": "13px",
+						"padding": "0 10px"
+					}
+				},
+				"variants": [
+					"default",
+					"primary",
+					"success",
+					"warning",
+					"error",
+					"info",
+					"outline"
+				]
+			},
+			"chip": {
+				"description": "Интерактивная метка (фильтр, тег)",
+				"height": "32px",
+				"fontSize": "13px",
+				"variants": ["default", "selected", "removable"],
+				"withIcon": true
+			},
+			"counter_badge": {
+				"description": "Числовой счётчик поверх иконки (корзина)",
+				"size": "18px",
+				"position": "top-right"
+			}
+		},
+
+		"icons": {
+			"library": "Lucide Icons / Heroicons",
+			"sizes": {
+				"xs": "14px",
+				"sm": "16px",
+				"md": "20px",
+				"lg": "24px",
+				"xl": "32px"
+			}
+		},
+
+		"divider": {
+			"horizontal": { "height": "1px", "color": "border.light" },
+			"vertical": { "width": "1px", "color": "border.light" },
+			"with_label": {
+				"description": "Разделитель с текстом посередине (или)"
+			}
+		},
+
+		"avatar": {
+			"description": "Аватар пользователя — фото или инициалы",
+			"sizes": {
+				"xs": "24px",
+				"sm": "32px",
+				"md": "40px",
+				"lg": "48px",
+				"xl": "64px"
+			},
+			"variants": ["image", "initials", "icon"]
+		},
+
+		"tooltip": {
+			"description": "Всплывающая подсказка",
+			"maxWidth": "200px",
+			"positions": ["top", "bottom", "left", "right"]
+		},
+
+		"modal": {
+			"sizes": {
+				"sm": "400px",
+				"md": "560px",
+				"lg": "720px",
+				"full": "100%"
+			},
+			"parts": [
+				"overlay",
+				"container",
+				"header",
+				"body",
+				"footer",
+				"close-button"
+			]
+		},
+
+		"notification": {
+			"toast": {
+				"description": "Всплывающее уведомление (временное)",
+				"variants": ["success", "error", "warning", "info"],
+				"position": "top-right",
+				"duration": "4000ms"
+			},
+			"alert": {
+				"description": "Встроенное уведомление в контент",
+				"variants": ["success", "error", "warning", "info"],
+				"dismissible": true
+			}
+		},
+
+		"pagination": {
+			"description": "Пагинация списков и каталога",
+			"variants": [
+				"numbered",
+				"prev-next",
+				"load-more",
+				"infinite-scroll"
+			]
+		},
+
+		"breadcrumbs": {
+			"description": "Навигационные хлебные крошки",
+			"separator": "/",
+			"maxItems": 4,
+			"collapsible": true
+		},
+
+		"tabs": {
+			"variants": ["underline", "pill", "boxed"],
+			"sizes": ["sm", "md", "lg"],
+			"withIcons": true
+		},
+
+		"accordion": {
+			"description": "Раскрывающийся список",
+			"variants": ["single", "multiple"],
+			"withIcon": true
+		},
+
+		"skeleton": {
+			"description": "Плейсхолдер загрузки",
+			"variants": ["text", "circle", "rect", "card", "product-card"]
+		},
+
+		"auth_forms": {
+			"login": {
+				"fields": ["email", "password"],
+				"features": [
+					"remember-me",
+					"forgot-password",
+					"social-auth (Google, Apple)"
+				],
+				"submitButton": "Войти"
+			},
+			"register": {
+				"fields": ["name", "email", "password", "password-confirm"],
+				"features": ["terms-agreement", "social-auth"],
+				"submitButton": "Создать аккаунт"
+			},
+			"forgot_password": {
+				"fields": ["email"],
+				"submitButton": "Отправить ссылку"
+			}
+		}
+	}
+}

@@ -1,0 +1,589 @@
+{
+	"app_components": {
+		"meta": {
+			"type": "ecommerce",
+			"description": "Компоненты специфичные для интернет-магазина"
+		},
+
+		"product_card": {
+			"description": "Карточка товара в каталоге",
+			"variants": ["grid", "list", "mini", "featured"],
+			"parts": {
+				"image": {
+					"aspectRatio": "4/5",
+					"borderRadius": "image",
+					"hover": "scale(1.03)"
+				},
+				"badges": ["sale", "new", "hit", "out-of-stock"],
+				"wishlist": { "type": "icon-button", "position": "top-right" },
+				"quick_view": {
+					"description": "Появляется при hover",
+					"type": "button"
+				},
+				"brand": { "size": "caption", "color": "text.muted" },
+				"title": { "size": "base", "weight": 500, "lines": 2 },
+				"rating": { "stars": 5, "reviewCount": true },
+				"price": {
+					"current": {
+						"size": "lg",
+						"weight": 700,
+						"color": "text.primary"
+					},
+					"old": {
+						"size": "sm",
+						"decoration": "line-through",
+						"color": "text.muted"
+					},
+					"discount": { "type": "badge", "color": "product.sale" }
+				},
+				"variants_preview": {
+					"description": "Кружочки цветов под карточкой",
+					"maxShow": 5
+				},
+				"add_to_cart": {
+					"type": "button",
+					"variant": "primary",
+					"size": "medium"
+				}
+			},
+			"states": ["default", "hover", "out-of-stock", "loading"]
+		},
+
+		"product_page": {
+			"description": "Детальная страница товара",
+			"parts": {
+				"gallery": {
+					"main_image": { "aspectRatio": "1/1" },
+					"thumbnails": {
+						"count": "up to 8",
+						"orientation": "vertical"
+					},
+					"zoom": true,
+					"fullscreen": true
+				},
+				"info_block": {
+					"breadcrumbs": true,
+					"brand": true,
+					"title": { "tag": "h1" },
+					"article_sku": true,
+					"rating_reviews": true,
+					"price": { "current": true, "old": true, "discount": true },
+					"variant_selector": {
+						"color": "color_picker_dots",
+						"size": "size_badges",
+						"quantity": "number-input-with-stepper"
+					},
+					"add_to_cart": {
+						"type": "button",
+						"variant": "primary",
+						"size": "large",
+						"fullWidth": true
+					},
+					"add_to_wishlist": true,
+					"delivery_info": { "icon": true, "text": true },
+					"stock_status": true
+				},
+				"tabs_section": {
+					"tabs": ["Описание", "Характеристики", "Отзывы", "Вопросы"],
+					"reviews": {
+						"rating_summary": true,
+						"review_list": true,
+						"add_review_form": true
+					}
+				}
+			}
+		},
+
+		"catalog_page": {
+			"description": "Страница каталога / листинга товаров",
+			"parts": {
+				"header": {
+					"title": true,
+					"breadcrumbs": true,
+					"results_count": true,
+					"sort_select": {
+						"options": [
+							"По популярности",
+							"Сначала дешевле",
+							"Сначала дороже",
+							"По рейтингу",
+							"Новинки"
+						]
+					},
+					"view_toggle": { "options": ["grid", "list"] }
+				},
+				"layout": {
+					"sidebar_filter": true,
+					"product_grid": {
+						"columns": { "mobile": 2, "tablet": 3, "desktop": 4 }
+					},
+					"pagination": true
+				}
+			}
+		},
+
+		"filter": {
+			"description": "Боковая панель фильтрации товаров",
+			"parts": {
+				"categories": {
+					"type": "accordion-with-checkboxes",
+					"max_visible": 5,
+					"show_more": true
+				},
+				"price_range": {
+					"type": "double_range_slider",
+					"inputs": ["min", "max"],
+					"currency": "₽"
+				},
+				"color": {
+					"type": "color_picker_dots",
+					"multiselect": true,
+					"sizes": "24px",
+					"show_name_on_hover": true
+				},
+				"size": {
+					"type": "size_badges",
+					"multiselect": true
+				},
+				"brand": {
+					"type": "search_suggestion_multi_select",
+					"placeholder": "Поиск бренда..."
+				},
+				"rating": {
+					"type": "star-radio-buttons"
+				},
+				"in_stock_only": {
+					"type": "toggle"
+				},
+				"active_filters": {
+					"description": "Строка активных фильтров-чипсов с кнопкой сброса",
+					"type": "chips-row",
+					"resetAll": true
+				}
+			},
+			"mobile": {
+				"trigger": "button",
+				"display": "bottom-sheet / side-drawer",
+				"apply_button": true,
+				"reset_button": true
+			}
+		},
+
+		"cart": {
+			"description": "Корзина товаров — секция / страница",
+			"variants": ["mini-cart (dropdown)", "full-page", "side-drawer"],
+			"parts": {
+				"header": {
+					"title": "Корзина",
+					"items_count": true,
+					"clear_all": true
+				},
+				"item": {
+					"image": { "size": "80x80", "borderRadius": "image" },
+					"title": true,
+					"variant": { "description": "Цвет, размер" },
+					"price": { "current": true, "old": true },
+					"quantity": { "type": "stepper-input", "min": 1 },
+					"remove": { "type": "icon-button" },
+					"availability": true
+				},
+				"promo_code": {
+					"input": true,
+					"apply_button": true,
+					"applied_badge": true
+				},
+				"summary": {
+					"subtotal": true,
+					"discount": true,
+					"delivery": true,
+					"total": { "size": "xl", "weight": 700 },
+					"checkout_button": {
+						"variant": "primary",
+						"size": "large",
+						"fullWidth": true
+					},
+					"continue_shopping": true
+				},
+				"empty_state": {
+					"icon": true,
+					"text": "Ваша корзина пуста",
+					"cta": { "text": "Перейти в каталог", "variant": "primary" }
+				}
+			}
+		},
+
+		"checkout_form": {
+			"description": "Форма оформления заказа",
+			"steps": [
+				{
+					"step": 1,
+					"title": "Контактные данные",
+					"fields": [
+						{
+							"name": "last_name",
+							"type": "text",
+							"label": "Фамилия",
+							"required": true
+						},
+						{
+							"name": "first_name",
+							"type": "text",
+							"label": "Имя",
+							"required": true
+						},
+						{
+							"name": "middle_name",
+							"type": "text",
+							"label": "Отчество",
+							"required": false
+						},
+						{
+							"name": "email",
+							"type": "email",
+							"label": "Email",
+							"required": true
+						},
+						{
+							"name": "phone",
+							"type": "tel",
+							"label": "Телефон",
+							"required": true,
+							"mask": "+7 (___) ___-__-__"
+						}
+					]
+				},
+				{
+					"step": 2,
+					"title": "Доставка",
+					"fields": [
+						{
+							"name": "delivery_method",
+							"type": "radio-cards",
+							"label": "Способ доставки",
+							"options": [
+								"Курьером",
+								"Самовывоз",
+								"Почта России",
+								"СДЭК"
+							]
+						},
+						{
+							"name": "city",
+							"type": "search_suggestion",
+							"label": "Город",
+							"required": true
+						},
+						{
+							"name": "street",
+							"type": "text",
+							"label": "Улица",
+							"required": true
+						},
+						{
+							"name": "house",
+							"type": "text",
+							"label": "Дом",
+							"required": true
+						},
+						{
+							"name": "apartment",
+							"type": "text",
+							"label": "Квартира",
+							"required": false
+						},
+						{
+							"name": "zip",
+							"type": "text",
+							"label": "Индекс",
+							"required": false
+						},
+						{
+							"name": "comment",
+							"type": "textarea",
+							"label": "Комментарий к заказу",
+							"required": false
+						}
+					]
+				},
+				{
+					"step": 3,
+					"title": "Оплата",
+					"fields": [
+						{
+							"name": "payment_method",
+							"type": "radio-cards",
+							"label": "Способ оплаты",
+							"options": [
+								"Картой онлайн",
+								"Наличными при получении",
+								"СБП",
+								"Рассрочка"
+							]
+						}
+					]
+				},
+				{
+					"step": 4,
+					"title": "Подтверждение",
+					"parts": [
+						"order-summary",
+						"terms-agreement-checkbox",
+						"submit-button"
+					]
+				}
+			],
+			"ui": {
+				"layout": "stepper",
+				"stepper": { "type": "horizontal-numbered" },
+				"submit": {
+					"text": "Оформить заказ",
+					"variant": "primary",
+					"size": "large"
+				}
+			}
+		},
+
+		"header": {
+			"description": "Шапка сайта",
+			"parts": {
+				"logo": true,
+				"navigation": {
+					"type": "horizontal",
+					"dropdown": true,
+					"mega_menu": true
+				},
+				"search": {
+					"type": "expanding / fullscreen",
+					"suggestions": true
+				},
+				"actions": {
+					"wishlist": { "icon": true, "counter": true },
+					"cart": {
+						"icon": true,
+						"counter": true,
+						"mini_cart_on_hover": true
+					},
+					"account": {
+						"icon": true,
+						"dropdown": ["Профиль", "Заказы", "Избранное", "Выход"]
+					}
+				},
+				"top_bar": {
+					"description": "Строка над хедером: промо-текст, телефон, ссылки"
+				},
+				"sticky": true
+			},
+			"mobile": {
+				"burger_menu": true,
+				"bottom_nav": {
+					"items": [
+						"Главная",
+						"Каталог",
+						"Поиск",
+						"Корзина",
+						"Профиль"
+					]
+				}
+			}
+		},
+
+		"footer": {
+			"parts": {
+				"logo_description": true,
+				"nav_columns": {
+					"count": 4,
+					"example": ["Каталог", "Компания", "Помощь", "Контакты"]
+				},
+				"contacts": {
+					"phone": true,
+					"email": true,
+					"address": true,
+					"workHours": true
+				},
+				"social_links": ["VK", "Telegram", "YouTube", "Instagram"],
+				"newsletter": { "input": true, "button": true },
+				"payment_icons": true,
+				"copyright": true,
+				"legal_links": ["Политика конфиденциальности", "Договор оферты"]
+			}
+		},
+
+		"search": {
+			"bar": {
+				"placeholder": "Поиск товаров...",
+				"icon": true,
+				"clear_button": true
+			},
+			"suggestions": {
+				"recent": true,
+				"popular": true,
+				"products_preview": true,
+				"categories": true
+			},
+			"results_page": {
+				"query_highlight": true,
+				"filters": true,
+				"sort": true,
+				"no_results_state": true
+			}
+		},
+
+		"wishlist": {
+			"description": "Список избранных товаров",
+			"parts": {
+				"item": {
+					"card": "product_card",
+					"remove_button": true,
+					"add_to_cart": true
+				},
+				"share_button": true,
+				"empty_state": {
+					"icon": true,
+					"text": "Нет избранных товаров",
+					"cta": "В каталог"
+				}
+			}
+		},
+
+		"order_history": {
+			"description": "Список заказов в личном кабинете",
+			"card_parts": {
+				"order_number": true,
+				"date": true,
+				"status_badge": {
+					"variants": [
+						"В обработке",
+						"Отправлен",
+						"Доставлен",
+						"Отменён"
+					]
+				},
+				"items_preview": { "max": 3, "show_more": true },
+				"total": true,
+				"repeat_button": true,
+				"track_button": true
+			}
+		},
+
+		"review": {
+			"form": {
+				"fields": [
+					{
+						"name": "rating",
+						"type": "star-picker",
+						"required": true
+					},
+					{
+						"name": "advantages",
+						"type": "textarea",
+						"label": "Достоинства"
+					},
+					{
+						"name": "drawbacks",
+						"type": "textarea",
+						"label": "Недостатки"
+					},
+					{
+						"name": "comment",
+						"type": "textarea",
+						"label": "Комментарий",
+						"required": true
+					},
+					{
+						"name": "photos",
+						"type": "file_dropzone",
+						"label": "Фото"
+					},
+					{
+						"name": "name",
+						"type": "text",
+						"label": "Ваше имя",
+						"required": true
+					}
+				]
+			},
+			"card": {
+				"parts": [
+					"avatar",
+					"name",
+					"date",
+					"verified-badge",
+					"rating",
+					"advantages",
+					"drawbacks",
+					"comment",
+					"photos",
+					"likes",
+					"seller-reply"
+				]
+			},
+			"summary": {
+				"average_rating": true,
+				"distribution_bars": true,
+				"total_count": true
+			}
+		},
+
+		"promo_banner": {
+			"variants": [
+				"hero-fullwidth",
+				"split (text + image)",
+				"countdown-timer",
+				"multi-slide (swiper)"
+			],
+			"parts": ["headline", "subtext", "cta-button", "image", "timer"]
+		},
+
+		"product_slider": {
+			"description": "Горизонтальная карусель карточек товаров",
+			"variants": [
+				"Хиты продаж",
+				"Новинки",
+				"Похожие товары",
+				"С этим покупают",
+				"Недавно просмотренные"
+			],
+			"controls": ["prev/next arrows", "dots", "drag"]
+		},
+
+		"category_grid": {
+			"description": "Сетка категорий с иконками или изображениями",
+			"variants": [
+				"icon + label",
+				"image + overlay label",
+				"large feature card"
+			]
+		},
+
+		"empty_states": {
+			"description": "Экраны пустых состояний",
+			"variants": [
+				"empty-cart",
+				"empty-wishlist",
+				"no-search-results",
+				"no-orders",
+				"404",
+				"500"
+			]
+		},
+
+		"cookie_banner": {
+			"position": "bottom",
+			"parts": [
+				"text",
+				"accept-button",
+				"decline-button",
+				"settings-link"
+			]
+		},
+
+		"compare": {
+			"description": "Сравнение товаров",
+			"parts": [
+				"add-to-compare button on card",
+				"compare bar (sticky bottom)",
+				"compare page table"
+			]
+		}
+	}
+}

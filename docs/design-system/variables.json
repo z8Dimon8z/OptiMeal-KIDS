@@ -1,0 +1,199 @@
+{
+	"variables": {
+		"typography": {
+			"fonts": {
+				"primary": {
+					"description": "Основной шрифт — для текста, интерфейса",
+					"family": "Inter",
+					"fallback": "sans-serif"
+				},
+				"accent": {
+					"description": "Акцентный шрифт — для заголовков, выделений",
+					"family": "Playfair Display",
+					"fallback": "serif"
+				},
+				"secondary": {
+					"description": "Дополнительный шрифт — для UI-меток, бейджей",
+					"family": "DM Mono",
+					"fallback": "monospace"
+				}
+			},
+			"scale": {
+				"xs": { "size": "12px", "lineHeight": "1.4" },
+				"sm": { "size": "14px", "lineHeight": "1.5" },
+				"base": { "size": "16px", "lineHeight": "1.6" },
+				"md": { "size": "18px", "lineHeight": "1.6" },
+				"lg": { "size": "20px", "lineHeight": "1.5" },
+				"xl": { "size": "24px", "lineHeight": "1.4" },
+				"2xl": { "size": "32px", "lineHeight": "1.3" },
+				"3xl": { "size": "40px", "lineHeight": "1.2" },
+				"4xl": { "size": "56px", "lineHeight": "1.1" }
+			},
+			"weights": {
+				"regular": 400,
+				"medium": 500,
+				"semibold": 600,
+				"bold": 700
+			},
+			"letterSpacing": {
+				"tight": "-0.02em",
+				"normal": "0em",
+				"wide": "0.04em",
+				"wider": "0.08em"
+			}
+		},
+
+		"colors": {
+			"light": {
+				"background": {
+					"primary": "#FFFFFF",
+					"secondary": "#F7F7F5",
+					"tertiary": "#EDEDE8"
+				},
+				"text": {
+					"primary": "#1A1A1A",
+					"secondary": "#5C5C5C",
+					"muted": "#9B9B9B",
+					"inverse": "#FFFFFF",
+					"accent": "#2563EB"
+				},
+				"accent": {
+					"primary": "#2563EB",
+					"hover": "#1D4ED8",
+					"light": "#EFF6FF"
+				},
+				"secondary_accent": {
+					"primary": "#7C3AED",
+					"hover": "#6D28D9",
+					"light": "#F5F3FF"
+				},
+				"semantic": {
+					"success": "#16A34A",
+					"successBg": "#F0FDF4",
+					"warning": "#D97706",
+					"warningBg": "#FFFBEB",
+					"error": "#DC2626",
+					"errorBg": "#FEF2F2",
+					"info": "#0284C7",
+					"infoBg": "#F0F9FF"
+				},
+				"border": {
+					"light": "#E5E5E3",
+					"default": "#D1D1CE",
+					"strong": "#A3A3A0"
+				}
+			},
+			"dark": {
+				"background": {
+					"primary": "#121212",
+					"secondary": "#1E1E1E",
+					"tertiary": "#2A2A2A"
+				},
+				"text": {
+					"primary": "#F5F5F5",
+					"secondary": "#A3A3A3",
+					"muted": "#6B6B6B",
+					"inverse": "#121212",
+					"accent": "#60A5FA"
+				},
+				"accent": {
+					"primary": "#3B82F6",
+					"hover": "#60A5FA",
+					"light": "#1E3A5F"
+				},
+				"border": {
+					"light": "#2C2C2C",
+					"default": "#3C3C3C",
+					"strong": "#555555"
+				}
+			},
+			"panel": {
+				"description": "Плашка с контрастным фоном",
+				"background": "#1A1A1A",
+				"text": "#FFFFFF",
+				"accent": "#60A5FA",
+				"muted": "#9B9B9B"
+			},
+			"product": {
+				"sale": "#DC2626",
+				"saleBg": "#FEF2F2",
+				"new": "#16A34A",
+				"newBg": "#F0FDF4",
+				"hit": "#D97706",
+				"hitBg": "#FFFBEB",
+				"outOfStock": "#9B9B9B",
+				"outOfStockBg": "#F5F5F5"
+			}
+		},
+
+		"spacing": {
+			"0": "0px",
+			"1": "4px",
+			"2": "8px",
+			"3": "12px",
+			"4": "16px",
+			"5": "20px",
+			"6": "24px",
+			"8": "32px",
+			"10": "40px",
+			"12": "48px",
+			"16": "64px",
+			"20": "80px",
+			"24": "96px"
+		},
+
+		"borderRadius": {
+			"none": "0px",
+			"sm": "4px",
+			"md": "8px",
+			"lg": "12px",
+			"xl": "16px",
+			"2xl": "24px",
+			"full": "9999px",
+			"button": "8px",
+			"card": "12px",
+			"badge": "9999px",
+			"input": "8px",
+			"image": "8px"
+		},
+
+		"shadows": {
+			"xs": "0 1px 2px rgba(0,0,0,0.06)",
+			"sm": "0 2px 4px rgba(0,0,0,0.08)",
+			"md": "0 4px 12px rgba(0,0,0,0.10)",
+			"lg": "0 8px 24px rgba(0,0,0,0.12)",
+			"xl": "0 16px 40px rgba(0,0,0,0.14)",
+			"card": "0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)"
+		},
+
+		"transitions": {
+			"fast": "150ms ease",
+			"normal": "250ms ease",
+			"slow": "400ms ease"
+		},
+
+		"zIndex": {
+			"dropdown": 100,
+			"sticky": 200,
+			"overlay": 300,
+			"modal": 400,
+			"toast": 500
+		},
+
+		"breakpoints": {
+			"xs": "375px",
+			"sm": "640px",
+			"md": "768px",
+			"lg": "1024px",
+			"xl": "1280px",
+			"2xl": "1440px"
+		},
+
+		"grid": {
+			"columns": 12,
+			"gutter": "24px",
+			"margin": "16px",
+			"maxWidth": "1280px"
+		}
+	}
+}
