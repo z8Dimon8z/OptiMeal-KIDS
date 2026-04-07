@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Дизайн-система интернет-магазина OptiMeal KIDS: цвета, типографика, кнопки, карточки товаров, формы, бейджи и состояния элементов.">
+  <title>Design System - OptiMeal KIDS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Nunito+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+  <a class="sr-only" href="#main-content">Перейти к содержимому</a>
+
+  <header class="design-system-page__hero">
+    <div class="design-system-page__hero-inner">
+      <p class="design-system-page__eyebrow">OptiMeal KIDS</p>
+      <h1 class="design-system-page__title">Дизайн-система интернет-магазина</h1>
+      <p class="design-system-page__lead">
+        Playful e-commerce система для детского wellness-бренда: мягкие формы, теплые акценты,
+        крупные CTA и продуктовые компоненты, адаптированные под магазин и длинный landing flow.
+      </p>
+
+      <nav class="page-nav" aria-label="Навигация по дизайн-системе">
+        <a class="page-nav__link" href="#colors">Цвета</a>
+        <a class="page-nav__link" href="#typography">Типографика</a>
+        <a class="page-nav__link" href="#buttons">Кнопки</a>
+        <a class="page-nav__link" href="#product-cards">Карточки</a>
+        <a class="page-nav__link" href="#forms">Формы</a>
+        <a class="page-nav__link" href="#badges">Бейджи</a>
+        <a class="page-nav__link" href="#states">Состояния</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="design-system-page">
+    <section id="colors" class="design-system-section">
+      <div class="design-system-section__heading">
+        <p class="design-system-section__eyebrow">Tokens</p>
+        <h2>Цветовая система</h2>
+        <p>
+          Базовая палитра объединяет небесные, кремовые и фруктовые оттенки. Primary отвечает за действия,
+          secondary поддерживает мягкий UI-контекст, accent создает эмоциональные точки притяжения.
+        </p>
+      </div>
+
+      <div class="token-grid">
+        <article class="token-card">
+          <h3>Primary</h3>
+          <div class="token-swatch token-swatch--primary">#FF6B6B</div>
+          <ul class="token-card__list">
+            <li>Primary 500: coral CTA</li>
+            <li>Hover: warm red coral</li>
+            <li>Light: soft peach tint</li>
+          </ul>
+        </article>
+
+        <article class="token-card">
+          <h3>Secondary</h3>
+          <div class="token-swatch token-swatch--secondary">#5EC8F8</div>
+          <ul class="token-card__list">
+            <li>Secondary 500: sky brand tone</li>
+            <li>Hover: ocean blue</li>
+            <li>Light: milk blue background</li>
+          </ul>
+        </article>
+
+        <article class="token-card">
+          <h3>Accent</h3>
+          <div class="token-swatch token-swatch--accent">#FFD166</div>
+          <ul class="token-card__list">
+            <li>Accent 500: sunny highlight</li>
+            <li>Accent alt: lime freshness</li>
+            <li>Accent dark: berry purple break</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="token-grid token-grid--dense">
+        <article class="token-card">
+          <h3>Нейтральные фоны</h3>
+          <div class="palette-row">
+            <span class="palette-row__item palette-row__item--cream">Cream</span>
+            <span class="palette-row__item palette-row__item--blush">Blush</span>
+            <span class="palette-row__item palette-row__item--white">White</span>
+          </div>
+        </article>
+
+        <article class="token-card">
+          <h3>Системные цвета</h3>
+          <div class="palette-row">
+            <span class="palette-row__item palette-row__item--success">Success</span>
+            <span class="palette-row__item palette-row__item--warning">Warning</span>
+            <span class="palette-row__item palette-row__item--error">Error</span>
+            <span class="palette-row__item palette-row__item--info">Info</span>
+          </div>
+        </article>
+
+        <article class="token-card">
+          <h3>Контентные цвета</h3>
+          <div class="palette-row">
+            <span class="palette-row__item palette-row__item--text">Text</span>
+            <span class="palette-row__item palette-row__item--muted">Muted</span>
+            <span class="palette-row__item palette-row__item--panel">Panel</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="typography" class="design-system-section">
+      <div class="design-system-section__heading">
+        <p class="design-system-section__eyebrow">Typography</p>
+        <h2>Типографика</h2>
+        <p>
+          Заголовки должны быть округлыми и эмоциональными, основной текст - дружелюбным и читаемым.
+          Для UI-меток используется более плотное начертание с компактной посадкой.
+        </p>
+      </div>
+
+      <div class="type-grid">
+        <article class="token-card">
+          <h3>Заголовки</h3>
+          <p class="type-sample type-sample--display">H1. Яркий детский оффер</p>
+          <p class="type-sample type-sample--h2">H2. Секция с преимуществами</p>
+          <p class="type-sample type-sample--h3">H3. Карточка или контентный блок</p>
+        </article>
+
+        <article class="token-card">
+          <h3>Текст</h3>
+          <p class="type-sample type-sample--lead">
+            Lead. Используется для вводных абзацев, текстовых hero-блоков и пояснений рядом с CTA.
+          </p>
+          <p class="type-sample type-sample--body">
+            Body. Базовый текст для карточек товара, форм, списков преимуществ и контентных описаний.
+          </p>
+          <p class="type-sample type-sample--caption">
+            Caption. Подписи, метки, статусы, вспомогательные тексты.
+          </p>
+        </article>
+
+        <article class="token-card">
+          <h3>Шрифтовые роли</h3>
+          <dl class="token-card__meta">
+            <dt>Display / headings</dt>
+            <dd>Baloo 2, bold, мягкая и дружелюбная подача</dd>
+            <dt>Body / paragraphs</dt>
+            <dd>Nunito, regular-medium, высокая читабельность</dd>
+            <dt>UI labels</dt>
+            <dd>Nunito Sans, semibold, компактный интерфейсный тон</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section id="buttons" class="design-system-section">
+      <div class="design-system-section__heading">
+        <p class="design-system-section__eyebrow">Common Elements</p>
+        <h2>Кнопки</h2>
+        <p>
+          Кнопки строятся на капсульной геометрии, плотном вертикальном ритме и теплом CTA-контрасте.
+          Основной сценарий - покупка, выбор SKU, переход к каталогу или оформлению заказа.
+        </p>
+      </div>
+
+      <div class="component-showcase">
+        <article class="showcase-card">
+          <h3>Варианты</h3>
+          <div class="button-row">
+            <button class="button button--primary button--medium" type="button">Купить сейчас</button>
+            <button class="button button--secondary button--medium" type="button">Подробнее</button>
+            <button class="button button--ghost button--medium" type="button">В избранное</button>
+            <button class="button button--danger button--medium" type="button">Удалить</button>
+            <button class="button button--link button--medium" type="button">Условия акции</button>
+          </div>
+        </article>
+
+        <article class="showcase-card">
+          <h3>Размеры</h3>
+          <div class="button-row button-row--align-end">
+            <button class="button button--primary button--small" type="button">Small</button>
+            <button class="button button--primary button--medium" type="button">Medium</button>
+            <button class="button button--primary button--large" type="button">Large</button>
+          </div>
+        </article>
+
+        <article class="showcase-card">
+          <h3>Состояния</h3>
+          <div class="button-row">
+            <button class="button button--primary button--medium" type="button">Default</button>
+            <button class="button button--primary button--medium button--state-hover" type="button">Hover</button>
+            <button class="button button--primary button--medium button--state-active" type="button">Active</button>
+            <button class="button button--primary button--medium" type="button" disabled>Disabled</button>
+            <button class="button button--primary button--medium button--loading" type="button" aria-disabled="true">Loading</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="product-cards" class="design-system-section">
+      <div class="design-system-section__heading">
+        <p class="design-system-section__eyebrow">App Components</p>
+        <h2>Карточки товаров</h2>
+        <p>
+          Карточки должны быть чище промо-блоков, но все еще дружелюбными по форме. Важны крупный продуктовый
+          визуал, заметная цена, статусные бейджи, быстрый CTA и hover-состояние с quick action.
+        </p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-card__media">
+            <span class="badge badge--sale">-20%</span>
+            <button class="product-card__wish" type="button" aria-label="Добавить в избранное">♡</button>
+            <div class="product-card__pack product-card__pack--berry" aria-hidden="true"></div>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">OptiMeal KIDS</p>
+            <h3 class="product-card__title">Multivitamins Berry Mix</h3>
+            <p class="product-card__rating" aria-label="Рейтинг 4.8 из 5">★★★★★ <span>(124)</span></p>
+            <div class="product-card__price">
+              <strong class="product-card__price-current">1 290 ₽</strong>
+              <span class="product-card__price-old">1 590 ₽</span>
+            </div>
+            <div class="product-card__variants" aria-label="Варианты вкусов">
+              <span class="product-card__variant product-card__variant--berry"></span>
+              <span class="product-card__variant product-card__variant--banana"></span>
+              <span class="product-card__variant product-card__variant--apple"></span>
+            </div>
+            <button class="button button--primary button--medium button--full" type="button">Добавить в корзину</button>
+          </div>
+        </article>
+
+        <article class="product-card product-card--featured">
+          <div class="product-card__media">
+            <span class="badge badge--new">new</span>
+            <button class="product-card__wish" type="button" aria-label="Добавить в избранное">♡</button>
+            <button class="product-card__quick" type="button">Быстрый просмотр</button>
+            <div class="product-card__pack product-card__pack--banana" aria-hidden="true"></div>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">OptiMeal KIDS</p>
+            <h3 class="product-card__title">My Little Hero Gummies</h3>
+            <p class="product-card__rating" aria-label="Рейтинг 5 из 5">★★★★★ <span>(89)</span></p>
+            <div class="product-card__price">
+              <strong class="product-card__price-current">1 490 ₽</strong>
+              <span class="product-card__price-old">1 690 ₽</span>
+            </div>
+            <div class="product-card__variants" aria-label="Варианты вкусов">
+              <span class="product-card__variant product-card__variant--banana"></span>
+              <span class="product-card__variant product-card__variant--apple"></span>
+              <span class="product-card__variant product-card__variant--peach"></span>
+              <span class="product-card__variant product-card__variant--grape"></span>
+            </div>
+            <button class="button button--primary button--medium button--full" type="button">Выбрать вкус</button>
+          </div>
+        </article>
+
+        <article class="product-card product-card--out-of-stock">
+          <div class="product-card__media">
+            <span class="badge badge--neutral">нет в наличии</span>
+            <button class="product-card__wish" type="button" aria-label="Добавить в избранное">♡</button>
+            <div class="product-card__pack product-card__pack--apple" aria-hidden="true"></div>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__brand">OptiMeal KIDS</p>
+            <h3 class="product-card__title">Chewable Vitamins Apple</h3>
+            <p class="product-card__rating" aria-label="Рейтинг 4.6 из 5">★★★★☆ <span>(53)</span></p>
+            <div class="product-card__price">
+              <strong class="product-card__price-current">1 190 ₽</strong>
+            </div>
+            <button class="button button--ghost button--medium button--full" type="button" disabled>Нет в наличии</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="forms" class="design-system-section">
+      <div class="design-system-section__heading">
+        <p class="design-system-section__eyebrow">Forms</p>
+        <h2>Формы</h2>
+        <p>
+          Поля ввода должны оставаться крупными, читаемыми и дружелюбными. Форма поддерживает checkout,
+          подписку, обратную связь и быстрые действия в карточках каталога.
+        </p>
+      </div>
+
+      <div class="form-layout">
+        <article class="showcase-card">
+          <h3>Поля ввода</h3>
+          <form class="form" action="#" method="post" novalidate>
+            <fieldset class="form__group">
+              <legend class="form__legend">Контактные данные</legend>
+
+              <div class="form__field">
+                <label class="form__label" for="customer-name">Имя</label>
+                <input class="form__control" type="text" id="customer-name" name="customer-name" autocomplete="given-name" value="Алина">
+                <span class="form__hint" id="customer-name-hint">Используется для персонализации заказа</span>
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="customer-email">Email</label>
+                <input class="form__control form__control--focused" type="email" id="customer-email" name="customer-email" autocomplete="email" aria-describedby="customer-email-hint" value="kids@example.com">
+                <span class="form__hint" id="customer-email-hint">Получение чеков и статуса доставки</span>
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="customer-comment">Комментарий к заказу</label>
+                <textarea class="form__control form__control--textarea" id="customer-comment" name="customer-comment" rows="4">Без сахара и с доставкой после 18:00.</textarea>
+              </div>
+            </fieldset>
+          </form>
+        </article>
+
+        <article class="showcase-card">
+          <h3>Состояния формы</h3>
+          <form class="form" action="#" method="post" novalidate>
+            <div class="form__field">
+              <label class="form__label" for="state-default">Default</label>
+              <input class="form__control" type="text" id="state-default" name="state-default" autocomplete="off">
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="state-success">Success</label>
+              <input class="form__control form__control--success" type="text" id="state-success" name="state-success" autocomplete="off" value="Промокод применен">
+              <span class="form__success">Скидка 10% добавлена к заказу</span>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="state-error">Error</label>
+              <input class="form__control form__control--error" type="email" id="state-error" name="state-error" autocomplete="email" aria-describedby="state-error-text">
+              <span class="form__error" id="state-error-text" role="alert">Введите корректный email</span>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="state-disabled">Disabled</label>
+              <input class="form__control" type="text" id="state-disabled" name="state-disabled" autocomplete="off" disabled value="Недоступно">
+            </div>
+
+            <div class="form__controls">
+              <label class="choice">
+                <input class="choice__input" type="checkbox" checked>
+                <span class="choice__control"></span>
+                <span class="choice__label">Получать советы и акции</span>
+              </label>
+
+              <label class="toggle">
+                <input class="toggle__input" type="checkbox" checked>
+                <span class="toggle__track"></span>
+                <span class="toggle__label">Только товары в наличии</span>
+              </label>
+            </div>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section id="badges" class="design-system-section">
+      <div class="design-system-section__heading">
+        <p class="design-system-section__eyebrow">Badges & Chips</p>
+        <h2>Бейджи</h2>
+        <p>
+          Бейджи используются для статусов товара, промо-сообщений, фильтров и интерфейсных маркеров.
+          Они должны быть компактными, округлыми и хорошо различимыми даже в плотных карточках каталога.
+        </p>
+      </div>
+
+      <div class="component-showcase">
+        <article class="showcase-card">
+          <h3>Статусные бейджи</h3>
+          <div class="badge-row">
+            <span class="badge badge--primary">sale</span>
+            <span class="badge badge--new">new</span>
+            <span class="badge badge--hit">hit</span>
+            <span class="badge badge--info">info</span>
+            <span class="badge badge--neutral">stock</span>
+            <span class="badge badge--outline">outline</span>
+          </div>
+        </article>
+
+        <article class="showcase-card">
+          <h3>Фильтры и chips</h3>
+          <div class="badge-row">
+            <button class="chip" type="button">Без сахара</button>
+            <button class="chip chip--selected" type="button">Жевательные</button>
+            <button class="chip chip--removable" type="button">Яблоко <span aria-hidden="true">×</span></button>
+          </div>
+        </article>
+
+        <article class="showcase-card">
+          <h3>Counter badge</h3>
+          <div class="counter-example" aria-label="Пример счетчика корзины">
+            <span class="counter-example__icon" aria-hidden="true">🛒</span>
+            <span class="counter-badge">3</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="states" class="design-system-section">
+      <div class="design-system-section__heading">
+        <p class="design-system-section__eyebrow">Interaction</p>
+        <h2>Состояния элементов</h2>
+        <p>
+          Hover и active-состояния должны усиливать ощущение живого бренда через мягкое смещение,
+          тень и цветовой отклик. При этом интерактивность не должна превращать UI в шумный.
+        </p>
+      </div>
+
+      <div class="state-grid">
+        <article class="showcase-card">
+          <h3>Buttons</h3>
+          <div class="state-samples">
+            <div class="state-sample">
+              <p class="state-sample__label">Default</p>
+              <button class="button button--primary button--medium" type="button">Купить</button>
+            </div>
+            <div class="state-sample">
+              <p class="state-sample__label">Hover</p>
+              <button class="button button--primary button--medium button--state-hover" type="button">Купить</button>
+            </div>
+            <div class="state-sample">
+              <p class="state-sample__label">Active</p>
+              <button class="button button--primary button--medium button--state-active" type="button">Купить</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="showcase-card">
+          <h3>Product card</h3>
+          <div class="state-samples state-samples--card">
+            <article class="product-card product-card--mini">
+              <div class="product-card__media">
+                <div class="product-card__pack product-card__pack--berry" aria-hidden="true"></div>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__brand">Default</p>
+                <h4 class="product-card__title">Спокойное состояние карточки</h4>
+              </div>
+            </article>
+
+            <article class="product-card product-card--mini product-card--hover">
+              <div class="product-card__media">
+                <button class="product-card__quick" type="button">Quick view</button>
+                <div class="product-card__pack product-card__pack--banana" aria-hidden="true"></div>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__brand">Hover</p>
+                <h4 class="product-card__title">Легкое поднятие и quick action</h4>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <article class="showcase-card">
+          <h3>Form controls</h3>
+          <div class="state-samples">
+            <div class="state-sample state-sample--wide">
+              <p class="state-sample__label">Focused</p>
+              <input class="form__control form__control--focused" type="text" aria-label="Focused input" value="focus state">
+            </div>
+            <div class="state-sample state-sample--wide">
+              <p class="state-sample__label">Success</p>
+              <input class="form__control form__control--success" type="text" aria-label="Success input" value="validated">
+            </div>
+            <div class="state-sample state-sample--wide">
+              <p class="state-sample__label">Error</p>
+              <input class="form__control form__control--error" type="text" aria-label="Error input" value="invalid value">
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

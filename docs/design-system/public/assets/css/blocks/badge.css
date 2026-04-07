@@ -1,0 +1,128 @@
+.badge-row,
+.state-samples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.badge,
+.chip,
+.counter-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badge {
+  min-height: 1.65rem;
+  padding: 0.35rem 0.7rem;
+}
+
+.badge--primary {
+  background: var(--color-primary-100);
+  color: var(--color-primary-600);
+}
+
+.badge--sale {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+}
+
+.badge--new {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.badge--hit {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.badge--info {
+  background: var(--color-info-bg);
+  color: var(--color-info);
+}
+
+.badge--neutral {
+  background: #eef1f4;
+  color: var(--color-text-secondary);
+}
+
+.badge--outline {
+  border: 1px solid var(--color-border-default);
+  color: var(--color-text-secondary);
+}
+
+.chip {
+  min-height: 2rem;
+  padding: 0 0.95rem;
+  border: 1px solid var(--color-border-default);
+  background: #ffffff;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.chip--selected {
+  border-color: rgba(94, 200, 248, 0.5);
+  background: var(--color-secondary-100);
+  color: var(--color-secondary-600);
+}
+
+.chip--removable {
+  gap: 0.4rem;
+}
+
+.counter-example {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.4rem;
+  background: linear-gradient(180deg, #fff7ed 0%, #ffe9d4 100%);
+}
+
+.counter-example__icon {
+  font-size: 1.6rem;
+}
+
+.counter-badge {
+  position: absolute;
+  top: -0.2rem;
+  right: -0.2rem;
+  min-width: 1.35rem;
+  min-height: 1.35rem;
+  padding: 0.15rem;
+  background: var(--color-primary-500);
+  color: var(--color-text-inverse);
+}
+
+.state-sample {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.state-sample--wide {
+  min-width: 13rem;
+}
+
+.state-sample__label {
+  color: var(--color-text-muted);
+  font-family: var(--font-ui);
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.state-samples--card {
+  align-items: start;
+}

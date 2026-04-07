@@ -1,0 +1,102 @@
+.design-system-page__hero {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-16) var(--space-4) var(--space-12);
+  background: var(--gradient-hero);
+}
+
+.design-system-page__hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -2.5rem;
+  height: 6rem;
+  background: var(--color-bg-page);
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+
+.design-system-page__hero-inner,
+.design-system-page {
+  width: min(calc(100% - 2rem), var(--container-width));
+  margin: 0 auto;
+}
+
+.design-system-page__hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: var(--space-5);
+}
+
+.design-system-page__eyebrow,
+.design-system-section__eyebrow {
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--font-ui);
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.design-system-page__title {
+  max-width: 14ch;
+  color: var(--color-text-inverse);
+  font-size: clamp(2.75rem, 6vw, 4.75rem);
+  line-height: 0.98;
+}
+
+.design-system-page__lead {
+  max-width: 42rem;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: var(--font-size-lg);
+}
+
+.design-system-page {
+  display: grid;
+  gap: var(--space-8);
+  padding: 0 0 var(--space-16);
+}
+
+.design-system-section {
+  display: grid;
+  gap: var(--space-6);
+  padding: var(--space-8);
+  border: 1px solid rgba(255, 235, 223, 0.8);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-xs);
+  backdrop-filter: blur(10px);
+}
+
+.design-system-section__heading {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 48rem;
+}
+
+.design-system-section__eyebrow {
+  color: var(--color-secondary-600);
+}
+
+.design-system-section h2 {
+  font-size: clamp(2rem, 4vw, var(--font-size-3xl));
+}
+
+.design-system-section p {
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 47.99rem) {
+  .design-system-page__hero {
+    padding-top: var(--space-12);
+  }
+
+  .design-system-section {
+    padding: var(--space-5);
+    border-radius: 1.5rem;
+  }
+
+  .design-system-page__lead {
+    font-size: var(--font-size-md);
+  }
+}
