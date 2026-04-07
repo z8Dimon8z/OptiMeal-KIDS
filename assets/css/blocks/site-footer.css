@@ -1,0 +1,27 @@
+.site-footer {
+  padding: var(--space-10) 0;
+  background: linear-gradient(180deg, #1b9ed1 0%, #0b7cac 100%);
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.site-footer__grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.site-footer__text,
+.site-footer__contacts,
+.footer-nav {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.footer-nav,
+.site-footer__contacts {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.site-header__logo--footer {
+  color: var(--color-text-inverse);
+}

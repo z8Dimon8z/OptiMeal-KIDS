@@ -1,0 +1,114 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-12) 0;
+  background: var(--gradient-hero);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -2.5rem;
+  height: 6rem;
+  background: var(--color-bg-page);
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+
+.hero__layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.hero__content h1 {
+  max-width: 12ch;
+  margin: var(--space-4) 0;
+  color: var(--color-text-inverse);
+  font-size: clamp(2.75rem, 6vw, 4.75rem);
+  line-height: 0.98;
+}
+
+.hero__lead,
+.hero__facts {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero__lead {
+  max-width: 38rem;
+  font-size: var(--font-size-lg);
+}
+
+.hero__actions,
+.hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.hero__facts li {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hero__visual {
+  position: relative;
+  min-height: 28rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__image {
+  width: min(100%, 40rem);
+  height: auto;
+  filter: drop-shadow(0 22px 44px rgba(36, 79, 108, 0.16));
+}
+
+.feature-strip,
+.catalog-preview {
+  padding: var(--space-10) 0;
+}
+
+.feature-strip__grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.feature-card,
+.section-heading,
+.page-header,
+.catalog-sidebar,
+.cart-summary,
+.cart-item,
+.checkout-section {
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  background: var(--gradient-card);
+  box-shadow: var(--shadow-xs);
+}
+
+.feature-card {
+  padding: var(--space-6);
+}
+
+.feature-card p {
+  color: var(--color-text-secondary);
+}
+
+.section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding: var(--space-6);
+}

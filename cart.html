@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Прототип корзины интернет-магазина OptiMeal KIDS с товарами, счетчиками количества и итоговым блоком заказа.">
+  <title>Корзина - OptiMeal KIDS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Nunito+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+  <a class="sr-only" href="#main-content">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <p class="topbar__promo">Проверьте состав заказа перед оформлением</p>
+        <a class="topbar__link" href="./checkout.html">Перейти к оформлению</a>
+      </div>
+    </div>
+    <div class="container site-header__inner">
+      <a class="site-header__logo" href="./index.html">OptiMeal <span>KIDS</span></a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a class="site-nav__link" href="./index.html">Главная</a>
+        <a class="site-nav__link" href="./catalog.html">Каталог</a>
+        <a class="site-nav__link" href="./cart.html" aria-current="page">Корзина</a>
+        <a class="site-nav__link" href="./checkout.html">Оформление</a>
+      </nav>
+      <div class="site-header__actions">
+        <a class="icon-link" href="./checkout.html">Оформить</a>
+      </div>
+    </div>
+  </header>
+  <main id="main-content" class="page page--cart">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="./index.html">Главная</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Корзина</span>
+      </nav>
+      <section class="page-header">
+        <div>
+          <p class="eyebrow eyebrow--blue">Корзина</p>
+          <h1>Ваш заказ</h1>
+        </div>
+      </section>
+      <div class="cart-layout">
+        <section class="cart-items" aria-label="Товары в корзине">
+          <h2 class="sr-only">Список товаров в корзине</h2>
+          <article class="cart-item">
+            <img class="cart-item__image" src="./assets/img/product-berry.svg" alt="Упаковка Berry Mix Gummies" width="480" height="620" loading="lazy">
+            <div class="cart-item__content">
+              <h2 class="cart-item__title">Berry Mix Gummies</h2>
+              <p class="cart-item__meta">Вкус: ягодный микс</p>
+              <div class="cart-item__controls">
+                <div class="quantity" data-quantity>
+                  <button class="quantity__button" type="button" data-quantity-action="decrement" aria-label="Уменьшить количество">−</button>
+                  <input class="quantity__input" type="number" name="berry-qty" min="1" value="1" data-quantity-input>
+                  <button class="quantity__button" type="button" data-quantity-action="increment" aria-label="Увеличить количество">+</button>
+                </div>
+                <p class="cart-item__price">1 290 ₽</p>
+                <button class="button button--link button--medium" type="button">Удалить</button>
+              </div>
+            </div>
+          </article>
+          <article class="cart-item">
+            <img class="cart-item__image" src="./assets/img/product-banana.svg" alt="Упаковка Sunny Banana Chews" width="480" height="620" loading="lazy">
+            <div class="cart-item__content">
+              <h2 class="cart-item__title">Sunny Banana Chews</h2>
+              <p class="cart-item__meta">Вкус: банан</p>
+              <div class="cart-item__controls">
+                <div class="quantity" data-quantity>
+                  <button class="quantity__button" type="button" data-quantity-action="decrement" aria-label="Уменьшить количество">−</button>
+                  <input class="quantity__input" type="number" name="banana-qty" min="1" value="2" data-quantity-input>
+                  <button class="quantity__button" type="button" data-quantity-action="increment" aria-label="Увеличить количество">+</button>
+                </div>
+                <p class="cart-item__price">2 980 ₽</p>
+                <button class="button button--link button--medium" type="button">Удалить</button>
+              </div>
+            </div>
+          </article>
+        </section>
+        <aside class="cart-summary">
+          <h2>Итого</h2>
+          <form class="form" action="#" method="post" novalidate>
+            <div class="form__field">
+              <label class="form__label" for="promo-code">Промокод</label>
+              <div class="promo-field">
+                <input class="form__control" type="text" id="promo-code" name="promo-code" autocomplete="off" placeholder="KIDS10">
+                <button class="button button--secondary button--medium" type="button">Применить</button>
+              </div>
+            </div>
+          </form>
+          <dl class="summary-list">
+            <div class="summary-list__row"><dt>Товары</dt><dd>4 270 ₽</dd></div>
+            <div class="summary-list__row"><dt>Скидка</dt><dd>-290 ₽</dd></div>
+            <div class="summary-list__row"><dt>Доставка</dt><dd>Бесплатно</dd></div>
+            <div class="summary-list__row summary-list__row--total"><dt>К оплате</dt><dd>3 980 ₽</dd></div>
+          </dl>
+          <a class="button button--primary button--large button--full" href="./checkout.html">Перейти к оформлению</a>
+          <a class="button button--ghost button--medium button--full" href="./catalog.html">Продолжить покупки</a>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <a href="./catalog.html">Каталог</a>
+        <a href="./checkout.html">Оформление</a>
+      </nav>
+    </div>
+  </footer>
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

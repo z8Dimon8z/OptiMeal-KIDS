@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Прототип формы оформления заказа OptiMeal KIDS с контактными данными, доставкой, оплатой и итогом заказа.">
+  <title>Оформление заказа - OptiMeal KIDS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Nunito+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+  <a class="sr-only" href="#main-content">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <p class="topbar__promo">Оформление заказа в 4 шага</p>
+        <a class="topbar__link" href="./cart.html">Вернуться в корзину</a>
+      </div>
+    </div>
+    <div class="container site-header__inner">
+      <a class="site-header__logo" href="./index.html">OptiMeal <span>KIDS</span></a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a class="site-nav__link" href="./index.html">Главная</a>
+        <a class="site-nav__link" href="./catalog.html">Каталог</a>
+        <a class="site-nav__link" href="./cart.html">Корзина</a>
+        <a class="site-nav__link" href="./checkout.html" aria-current="page">Оформление</a>
+      </nav>
+      <div class="site-header__actions">
+        <a class="icon-link" href="./cart.html">Корзина <span class="counter-badge">2</span></a>
+      </div>
+    </div>
+  </header>
+  <main id="main-content" class="page page--checkout">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="./index.html">Главная</a>
+        <span aria-hidden="true">/</span>
+        <a href="./cart.html">Корзина</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Оформление</span>
+      </nav>
+      <section class="page-header">
+        <div>
+          <p class="eyebrow eyebrow--blue">Checkout</p>
+          <h1>Оформление заказа</h1>
+  
+      </section>
+      <ol class="checkout-steps" aria-label="Шаги оформления заказа">
+        <li class="checkout-steps__item checkout-steps__item--active">Контакты</li>
+        <li class="checkout-steps__item">Доставка</li>
+        <li class="checkout-steps__item">Оплата</li>
+        <li class="checkout-steps__item">Подтверждение</li>
+      </ol>
+      <div class="checkout-layout">
+        <form class="checkout-form" id="checkout-form" action="#" method="post" novalidate>
+          <section class="checkout-section">
+            <h2>Контактные данные</h2>
+            <div class="checkout-grid">
+              <div class="form__field"><label class="form__label" for="last-name">Фамилия</label><input class="form__control" type="text" id="last-name" name="last-name" autocomplete="family-name" required></div>
+              <div class="form__field"><label class="form__label" for="first-name">Имя</label><input class="form__control" type="text" id="first-name" name="first-name" autocomplete="given-name" required></div>
+              <div class="form__field"><label class="form__label" for="email">Email</label><input class="form__control" type="email" id="email" name="email" autocomplete="email" required></div>
+              <div class="form__field"><label class="form__label" for="phone">Телефон</label><input class="form__control" type="tel" id="phone" name="phone" autocomplete="tel" required></div>
+            </div>
+          </section>
+          <section class="checkout-section">
+            <h2>Доставка</h2>
+            <div class="radio-cards">
+              <label class="radio-card"><input type="radio" name="delivery-method" checked><span class="radio-card__content"><strong>Курьером</strong><span>Завтра с 10:00 до 18:00</span></span></label>
+              <label class="radio-card"><input type="radio" name="delivery-method"><span class="radio-card__content"><strong>Самовывоз</strong><span>Из ближайшего пункта выдачи</span></span></label>
+            </div>
+            <div class="checkout-grid">
+              <div class="form__field"><label class="form__label" for="city">Город</label><input class="form__control" type="text" id="city" name="city" autocomplete="address-level2" required></div>
+              <div class="form__field"><label class="form__label" for="street">Улица</label><input class="form__control" type="text" id="street" name="street" autocomplete="street-address" required></div>
+              <div class="form__field"><label class="form__label" for="house">Дом</label><input class="form__control" type="text" id="house" name="house" autocomplete="address-line1" required></div>
+              <div class="form__field"><label class="form__label" for="apartment">Квартира</label><input class="form__control" type="text" id="apartment" name="apartment" autocomplete="address-line2"></div>
+              <div class="form__field checkout-grid__full"><label class="form__label" for="comment">Комментарий к заказу</label><textarea class="form__control form__control--textarea" id="comment" name="comment" rows="4"></textarea></div>
+            </div>
+          </section>
+          <section class="checkout-section">
+            <h2>Оплата</h2>
+            <div class="radio-cards radio-cards--three">
+              <label class="radio-card"><input type="radio" name="payment-method" checked><span class="radio-card__content"><strong>Картой онлайн</strong><span>Visa, Mastercard, Мир</span></span></label>
+              <label class="radio-card"><input type="radio" name="payment-method"><span class="radio-card__content"><strong>СБП</strong><span>Быстрая оплата по QR</span></span></label>
+              <label class="radio-card"><input type="radio" name="payment-method"><span class="radio-card__content"><strong>При получении</strong><span>Наличными или картой</span></span></label>
+            </div>
+          </section>
+          <section class="checkout-section">
+            <label class="choice"><input class="choice__input" type="checkbox" checked required><span class="choice__control"></span><span class="choice__label">Я согласен с условиями обработки данных и правилами заказа</span></label>
+          </section>
+        </form>
+        <aside class="cart-summary">
+          <h2>Сводка заказа</h2>
+          <div class="summary-card-item"><img class="summary-card-item__image" src="./assets/img/product-berry.svg" alt="Упаковка Berry Mix Gummies" width="480" height="620" loading="lazy"><div><p>Berry Mix Gummies</p><small>1 шт.</small></div><strong>1 290 ₽</strong></div>
+          <div class="summary-card-item"><img class="summary-card-item__image" src="./assets/img/product-banana.svg" alt="Упаковка Sunny Banana Chews" width="480" height="620" loading="lazy"><div><p>Sunny Banana Chews</p><small>2 шт.</small></div><strong>2 980 ₽</strong></div>
+          <dl class="summary-list">
+            <div class="summary-list__row"><dt>Товары</dt><dd>4 270 ₽</dd></div>
+            <div class="summary-list__row"><dt>Скидка</dt><dd>-290 ₽</dd></div>
+            <div class="summary-list__row"><dt>Доставка</dt><dd>Бесплатно</dd></div>
+            <div class="summary-list__row summary-list__row--total"><dt>К оплате</dt><dd>3 980 ₽</dd></div>
+          </dl>
+          <button class="button button--primary button--large button--full" type="submit" form="checkout-form">Оформить заказ</button>
+          <p class="cart-summary__note">Прототип checkout-потока. Настоящая валидация и отправка подключаются позже.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <a href="./index.html">Главная</a>
+        <a href="./catalog.html">Каталог</a>
+        <a href="./cart.html">Корзина</a>
+      </nav>
+    </div>
+  </footer>
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

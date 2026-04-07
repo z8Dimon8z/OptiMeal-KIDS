@@ -1,0 +1,67 @@
+<svg width="960" height="760" viewBox="0 0 960 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="760" rx="64" fill="url(#bg)"/>
+  <path d="M0 556C118 514 217 521 320 564C419 604 526 621 640 584C748 549 830 540 960 578V760H0V556Z" fill="#84D85F"/>
+  <path d="M0 598C126 577 245 590 353 624C440 651 538 661 645 638C760 613 841 606 960 632V760H0V598Z" fill="#5DBE49"/>
+  <ellipse cx="196" cy="126" rx="76" ry="31" fill="white" fill-opacity=".58"/>
+  <ellipse cx="772" cy="143" rx="84" ry="36" fill="white" fill-opacity=".56"/>
+  <ellipse cx="688" cy="108" rx="49" ry="20" fill="white" fill-opacity=".56"/>
+  <g transform="translate(150 150)">
+    <circle cx="70" cy="72" r="58" fill="#FF7A6B"/>
+    <ellipse cx="49" cy="57" rx="10" ry="14" fill="#314058"/>
+    <ellipse cx="92" cy="57" rx="10" ry="14" fill="#314058"/>
+    <ellipse cx="70" cy="84" rx="28" ry="18" fill="#FFF3F0"/>
+    <path d="M57 83C64 90 76 90 83 83" stroke="#314058" stroke-width="6" stroke-linecap="round"/>
+    <path d="M68 14C65 2 79 -9 94 -4C106 1 110 15 105 26C97 16 82 17 68 14Z" fill="#9DDB6D"/>
+  </g>
+  <g transform="translate(367 120)">
+    <path d="M75 15C121 17 144 61 132 112C120 159 91 212 73 258C55 214 28 163 15 120C2 69 25 18 75 15Z" fill="#FFD55E"/>
+    <ellipse cx="56" cy="89" rx="10" ry="14" fill="#314058"/>
+    <ellipse cx="94" cy="89" rx="10" ry="14" fill="#314058"/>
+    <path d="M54 116C66 126 83 126 96 116" stroke="#314058" stroke-width="6" stroke-linecap="round"/>
+    <path d="M74 4C67 -17 94 -24 111 -9C124 2 124 18 112 27C105 15 91 10 74 4Z" fill="#9DDB6D"/>
+  </g>
+  <g transform="translate(620 170)">
+    <circle cx="77" cy="77" r="61" fill="#FFA64D"/>
+    <ellipse cx="55" cy="64" rx="10" ry="14" fill="#314058"/>
+    <ellipse cx="99" cy="64" rx="10" ry="14" fill="#314058"/>
+    <ellipse cx="77" cy="92" rx="31" ry="20" fill="#FFF1E3"/>
+    <path d="M61 92C69 101 84 101 93 92" stroke="#314058" stroke-width="6" stroke-linecap="round"/>
+    <path d="M74 11C82 0 102 -3 112 10C102 18 86 21 74 11Z" fill="#8CCC47"/>
+  </g>
+  <g transform="translate(260 326)">
+    <rect x="0" y="54" width="184" height="250" rx="34" fill="#FFF9F2"/>
+    <rect x="18" y="74" width="148" height="210" rx="22" fill="url(#pack1)"/>
+    <circle cx="92" cy="164" r="40" fill="#FFF3F0"/>
+    <circle cx="80" cy="152" r="22" fill="#FF7A6B"/>
+    <circle cx="109" cy="178" r="18" fill="#FFD55E"/>
+    <circle cx="126" cy="147" r="14" fill="#9DDB6D"/>
+    <rect x="50" y="100" width="84" height="14" rx="7" fill="#FFFFFF" fill-opacity=".84"/>
+    <rect x="59" y="224" width="66" height="12" rx="6" fill="#FFFFFF" fill-opacity=".86"/>
+  </g>
+  <g transform="translate(470 280)">
+    <rect x="0" y="74" width="220" height="298" rx="36" fill="#FFF9F2"/>
+    <rect x="22" y="98" width="176" height="248" rx="24" fill="url(#pack2)"/>
+    <circle cx="110" cy="200" r="48" fill="#FFF5CC"/>
+    <path d="M110 150C129 180 131 230 110 252C89 230 91 178 110 150Z" fill="#FFD55E"/>
+    <circle cx="88" cy="190" r="8" fill="#314058"/>
+    <circle cx="132" cy="190" r="8" fill="#314058"/>
+    <path d="M93 219C102 228 118 228 127 219" stroke="#314058" stroke-width="6" stroke-linecap="round"/>
+    <rect x="67" y="124" width="86" height="16" rx="8" fill="#FFFFFF" fill-opacity=".85"/>
+    <rect x="74" y="275" width="72" height="13" rx="6.5" fill="#FFFFFF" fill-opacity=".86"/>
+  </g>
+  <defs>
+    <linearGradient id="bg" x1="480" y1="0" x2="480" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6BD8FF"/>
+      <stop offset=".62" stop-color="#C4F1FF"/>
+      <stop offset="1" stop-color="#FFF5DA"/>
+    </linearGradient>
+    <linearGradient id="pack1" x1="92" y1="74" x2="92" y2="284" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFAAC5"/>
+      <stop offset="1" stop-color="#FF6B8A"/>
+    </linearGradient>
+    <linearGradient id="pack2" x1="110" y1="98" x2="110" y2="346" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE080"/>
+      <stop offset="1" stop-color="#FFB84E"/>
+    </linearGradient>
+  </defs>
+</svg>

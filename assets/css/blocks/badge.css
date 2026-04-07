@@ -1,0 +1,50 @@
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.badge,
+.chip,
+.counter-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: var(--weight-bold);
+}
+
+.badge {
+  min-height: 1.65rem;
+  padding: 0.35rem 0.7rem;
+}
+
+.badge--sale { background: var(--color-error-bg); color: var(--color-error); }
+.badge--new { background: var(--color-success-bg); color: var(--color-success); }
+.badge--hit { background: var(--color-warning-bg); color: var(--color-warning); }
+.badge--neutral { background: #eef1f4; color: var(--color-text-secondary); }
+
+.chip {
+  min-height: 2rem;
+  padding: 0 0.95rem;
+  border: 1px solid var(--color-border-default);
+  background: #ffffff;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.chip--selected {
+  border-color: rgba(94, 200, 248, 0.5);
+  background: var(--color-secondary-100);
+  color: var(--color-secondary-600);
+}
+
+.counter-badge {
+  min-width: 1.4rem;
+  min-height: 1.4rem;
+  padding: 0.15rem 0.35rem;
+  background: var(--color-primary-500);
+  color: var(--color-text-inverse);
+}
