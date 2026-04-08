@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог товаров OptiMeal KIDS с фильтрами, сортировкой и карточками товаров в детском friendly e-commerce стиле.">
+  <meta name="description" content="Каталог товаров OptiMeal KIDS с фильтрами, сортировкой и интерактивными карточками товаров.">
   <title>Каталог - OptiMeal KIDS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Nunito+Sans:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
-<body>
+<body data-page="catalog">
   <a class="sr-only" href="#main-content">Перейти к содержимому</a>
   <header class="site-header">
     <div class="topbar">
@@ -19,17 +19,17 @@
         <a class="topbar__link" href="./cart.html">Перейти в корзину</a>
       </div>
     </div>
-    <div class="container site-header__inner">
+    <div class="container site-header__inner" data-mobile-menu>
       <a class="site-header__logo" href="./index.html">OptiMeal <span>KIDS</span></a>
-      <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+      <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-menu-nav>
         <a class="site-nav__link" href="./index.html">Главная</a>
         <a class="site-nav__link" href="./catalog.html" aria-current="page">Каталог</a>
         <a class="site-nav__link" href="./cart.html">Корзина</a>
         <a class="site-nav__link" href="./checkout.html">Оформление</a>
       </nav>
       <div class="site-header__actions">
-        <a class="icon-link" href="./cart.html">Корзина <span class="counter-badge">2</span></a>
+        <a class="icon-link" href="./cart.html">Корзина <span class="counter-badge" data-cart-count>2</span></a>
       </div>
     </div>
   </header>
@@ -44,42 +44,42 @@
         <div>
           <p class="eyebrow eyebrow--blue">Каталог</p>
           <h1>Товары для ежедневной поддержки</h1>
-          <p class="page-header__lead">Чистая продуктовая сетка с бейджами, вкусами, ценой и быстрым действием.</p>
+          <p class="page-header__lead">Жевательные витамины, мультивитамины и полезные добавки с быстрой фильтрацией и сортировкой.</p>
         </div>
         <div class="page-header__meta">
-          <p>24 товара</p>
+          <p data-catalog-count aria-live="polite">4 товара</p>
           <label class="sort-select" for="catalog-sort">
             <span class="sr-only">Сортировка каталога</span>
-            <select class="form__control" id="catalog-sort" name="catalog-sort">
-              <option>По популярности</option>
-              <option>Сначала дешевле</option>
-              <option>Сначала дороже</option>
-              <option>По рейтингу</option>
-              <option>Новинки</option>
+            <select class="form__control" id="catalog-sort" name="catalog-sort" data-catalog-sort>
+              <option value="popular">По популярности</option>
+              <option value="price-asc">Сначала дешевле</option>
+              <option value="price-desc">Сначала дороже</option>
+              <option value="rating">По рейтингу</option>
+              <option value="new">Новинки</option>
             </select>
           </label>
         </div>
       </section>
       <div class="catalog-layout">
         <aside class="catalog-sidebar">
-          <form class="filter-panel" action="#" method="get" novalidate>
+          <form class="filter-panel" action="#" method="get" novalidate data-catalog-filters>
             <section class="filter-group">
               <h2>Категории</h2>
-              <label class="choice"><input class="choice__input" type="checkbox" checked><span class="choice__control"></span><span class="choice__label">Жевательные витамины</span></label>
-              <label class="choice"><input class="choice__input" type="checkbox"><span class="choice__control"></span><span class="choice__label">Мультивитамины</span></label>
-              <label class="choice"><input class="choice__input" type="checkbox"><span class="choice__control"></span><span class="choice__label">Пробиотики</span></label>
+              <label class="choice"><input class="choice__input" type="checkbox" checked data-filter-category="gummies"><span class="choice__control"></span><span class="choice__label">Жевательные витамины</span></label>
+              <label class="choice"><input class="choice__input" type="checkbox" checked data-filter-category="multivitamins"><span class="choice__control"></span><span class="choice__label">Мультивитамины</span></label>
+              <label class="choice"><input class="choice__input" type="checkbox" checked data-filter-category="probiotics"><span class="choice__control"></span><span class="choice__label">Пробиотики</span></label>
             </section>
             <section class="filter-group">
-              <h2>Активные фильтры</h2>
+              <h2>Вкусы</h2>
               <div class="badge-row">
-                <button class="chip chip--selected" type="button">Без сахара</button>
-                <button class="chip chip--removable" type="button">Яблоко <span aria-hidden="true">×</span></button>
+                <button class="chip chip--selected" type="button" data-flavor-chip data-filter-flavor="berry" aria-pressed="false">Ягоды</button>
+                <button class="chip chip--removable" type="button" data-flavor-chip data-filter-flavor="apple" aria-pressed="false">Яблоко</button>
               </div>
             </section>
             <section class="filter-group">
               <h2>Только в наличии</h2>
               <label class="toggle">
-                <input class="toggle__input" type="checkbox" checked>
+                <input class="toggle__input" type="checkbox" checked data-filter-stock>
                 <span class="toggle__track"></span>
                 <span class="toggle__label">Показывать доступные позиции</span>
               </label>
@@ -88,11 +88,11 @@
         </aside>
         <section class="catalog-content" aria-label="Список товаров">
           <h2 class="sr-only">Товары каталога</h2>
-          <div class="product-grid">
-            <article class="product-card">
+          <div class="product-grid" data-catalog-grid>
+            <article class="product-card" data-product-card data-product-id="sunny-banana" data-product-name="Sunny Banana Chews" data-product-price="1490" data-product-rating="5" data-product-reviews="89" data-product-category="multivitamins" data-product-flavor="banana" data-product-badge="new" data-product-stock="true" data-product-image="./assets/img/product-banana.svg">
               <div class="product-card__media">
                 <span class="badge badge--new">new</span>
-                <button class="product-card__wish" type="button" aria-label="Добавить в избранное">♡</button>
+                <button class="product-card__wish" type="button" aria-label="Добавить в избранное" aria-pressed="false" data-wishlist-toggle>♡</button>
                 <img class="product-card__image" src="./assets/img/product-banana.svg" alt="Упаковка Sunny Banana Chews" width="480" height="620" loading="lazy">
               </div>
               <div class="product-card__body">
@@ -100,13 +100,13 @@
                 <h2 class="product-card__title">Sunny Banana Chews</h2>
                 <p class="product-card__rating">★★★★★ <span>(89)</span></p>
                 <div class="product-card__price"><strong class="product-card__price-current">1 490 ₽</strong></div>
-                <button class="button button--primary button--medium button--full" type="button">В корзину</button>
+                <button class="button button--primary button--medium button--full" type="button" data-add-to-cart>В корзину</button>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-product-card data-product-id="berry-mix" data-product-name="Berry Mix Gummies" data-product-price="1290" data-product-old-price="1590" data-product-rating="4.8" data-product-reviews="124" data-product-category="gummies" data-product-flavor="berry" data-product-badge="sale" data-product-stock="true" data-product-image="./assets/img/product-berry.svg">
               <div class="product-card__media">
                 <span class="badge badge--sale">-15%</span>
-                <button class="product-card__wish" type="button" aria-label="Добавить в избранное">♡</button>
+                <button class="product-card__wish" type="button" aria-label="Добавить в избранное" aria-pressed="false" data-wishlist-toggle>♡</button>
                 <img class="product-card__image" src="./assets/img/product-berry.svg" alt="Упаковка Berry Mix Gummies" width="480" height="620" loading="lazy">
               </div>
               <div class="product-card__body">
@@ -114,13 +114,13 @@
                 <h2 class="product-card__title">Berry Mix Gummies</h2>
                 <p class="product-card__rating">★★★★★ <span>(124)</span></p>
                 <div class="product-card__price"><strong class="product-card__price-current">1 290 ₽</strong><span class="product-card__price-old">1 590 ₽</span></div>
-                <button class="button button--primary button--medium button--full" type="button">В корзину</button>
+                <button class="button button--primary button--medium button--full" type="button" data-add-to-cart>В корзину</button>
               </div>
             </article>
-            <article class="product-card">
+            <article class="product-card" data-product-card data-product-id="apple-daily" data-product-name="Apple Daily Vitamins" data-product-price="1190" data-product-rating="4.7" data-product-reviews="64" data-product-category="probiotics" data-product-flavor="apple" data-product-badge="hit" data-product-stock="true" data-product-image="./assets/img/product-apple.svg">
               <div class="product-card__media">
                 <span class="badge badge--hit">hit</span>
-                <button class="product-card__wish" type="button" aria-label="Добавить в избранное">♡</button>
+                <button class="product-card__wish" type="button" aria-label="Добавить в избранное" aria-pressed="false" data-wishlist-toggle>♡</button>
                 <img class="product-card__image" src="./assets/img/product-apple.svg" alt="Упаковка Apple Daily Vitamins" width="480" height="620" loading="lazy">
               </div>
               <div class="product-card__body">
@@ -128,13 +128,13 @@
                 <h2 class="product-card__title">Apple Daily Vitamins</h2>
                 <p class="product-card__rating">★★★★☆ <span>(64)</span></p>
                 <div class="product-card__price"><strong class="product-card__price-current">1 190 ₽</strong></div>
-                <button class="button button--primary button--medium button--full" type="button">В корзину</button>
+                <button class="button button--primary button--medium button--full" type="button" data-add-to-cart>В корзину</button>
               </div>
             </article>
-            <article class="product-card product-card--out-of-stock">
+            <article class="product-card product-card--out-of-stock" data-product-card data-product-id="immunity-strawberry" data-product-name="Immunity Strawberry" data-product-price="1350" data-product-rating="4.5" data-product-reviews="41" data-product-category="gummies" data-product-flavor="berry" data-product-badge="neutral" data-product-stock="false" data-product-image="./assets/img/product-berry.svg">
               <div class="product-card__media">
                 <span class="badge badge--neutral">нет в наличии</span>
-                <button class="product-card__wish" type="button" aria-label="Добавить в избранное">♡</button>
+                <button class="product-card__wish" type="button" aria-label="Добавить в избранное" aria-pressed="false" data-wishlist-toggle>♡</button>
                 <img class="product-card__image" src="./assets/img/product-berry.svg" alt="Упаковка Immunity Strawberry" width="480" height="620" loading="lazy">
               </div>
               <div class="product-card__body">

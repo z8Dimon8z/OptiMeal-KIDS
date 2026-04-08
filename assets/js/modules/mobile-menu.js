@@ -1,21 +1,20 @@
 export function initMobileMenu() {
-  const headers = document.querySelectorAll('.site-header__inner');
+  const menus = document.querySelectorAll('[data-mobile-menu]');
+  if (!menus.length) return;
 
-  headers.forEach((header) => {
-    const toggleButton = header.querySelector('.site-menu-toggle');
-    const nav = header.querySelector('.site-nav');
+  menus.forEach((menu) => {
+    const toggleButton = menu.querySelector('[data-menu-toggle]');
+    const nav = menu.querySelector('[data-menu-nav]');
 
-    if (!toggleButton || !nav) {
-      return;
-    }
+    if (!toggleButton || !nav) return;
 
     const closeMenu = () => {
-      header.classList.remove('is-menu-open');
+      menu.classList.remove('is-menu-open');
       toggleButton.setAttribute('aria-expanded', 'false');
     };
 
     toggleButton.addEventListener('click', () => {
-      const isOpen = header.classList.toggle('is-menu-open');
+      const isOpen = menu.classList.toggle('is-menu-open');
       toggleButton.setAttribute('aria-expanded', String(isOpen));
     });
 

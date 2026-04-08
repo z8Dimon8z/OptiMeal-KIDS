@@ -56,6 +56,11 @@
   cursor: pointer;
 }
 
+.product-card__wish.is-active {
+  color: #d05c4f;
+  background: rgba(255, 255, 255, 0.96);
+}
+
 .product-card .badge {
   position: absolute;
   top: var(--space-4);

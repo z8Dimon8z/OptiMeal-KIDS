@@ -165,6 +165,11 @@
   color: var(--color-primary-600);
 }
 
+.checkout-steps__item.is-complete {
+  border-color: rgba(47, 158, 107, 0.35);
+  color: #2f9e6b;
+}
+
 .summary-card-item {
   display: grid;
   gap: var(--space-3);
